@@ -1,0 +1,29 @@
+int sense1=A0;
+int sense2=A1;
+int sense3=A2;
+int sense4=A3;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+pinMode(sense1, INPUT);
+pinMode(sense2, INPUT);
+pinMode(sense3, INPUT);
+pinMode(sense4, INPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+int value1 =analogRead(sense1);
+int value2 =analogRead(sense2);
+int value3 =analogRead(sense3);
+int value4 =analogRead(sense4);
+Serial.print(value1);
+Serial.print(" ");
+Serial.println(value2);
+Serial.print(" ");
+Serial.print(value3);
+Serial.print(" ");
+Serial.println(value4);
+delay(100);
+
+}
